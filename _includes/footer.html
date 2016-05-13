@@ -1,38 +1,29 @@
-<footer class="site-footer">
+<!-- footer
+================================================== -->
+<footer>
 
-  <div class="wrapper">
+    <div class="row">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+        <div class="twelve columns">
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
+            <ul class="footer-nav">
+                <li><a href="{{ site.baseurl }}/">Home</a></li>
+                <li><a href="{{ site.baseurl }}/about">About</a></li>
+                <li><a href="{{ site.baseurl }}/people">People</a></li>
+                <li><a href="{{ site.baseurl }}/research">Research</a></li>
+                <li><a href="{{ site.baseurl }}/publications">Publications</a></li>
+            </ul>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
+            <ul class="copyright">
+                <li>Copyright &copy; 2016 Sugiyama Outcomes Labs</li>
+                <li>Design by <a href="http://www.styleshout.com/">Styleshout</a></li>
+            </ul>
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
+        </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+        <div id="go-top" style="display: block; background-color: #086788;"><a title="Back to Top" href="#">Go To Top</a></div>
+
     </div>
 
-  </div>
-
 </footer>
+<!-- Footer End-->

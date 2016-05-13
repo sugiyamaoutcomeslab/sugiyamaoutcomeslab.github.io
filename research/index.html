@@ -1,0 +1,68 @@
+---
+layout: default
+title: "Research"
+---
+<!-- Page Title
+================================================== -->
+<div id="page-title">
+
+    <div class="row">
+
+        <div class="ten columns centered text-center">
+            <h1>Research</h1>
+
+            <p>Current areas of active exploration.</p>
+        </div>
+
+    </div>
+
+</div>
+<!-- Page Title End-->
+
+<!-- Content
+   ================================================== -->
+<div class="content-outer">
+
+    <div id="page-content" class="row portfolio">
+
+        <div class="twelve columns">
+            <div class="blog-entries">
+            
+                {% for post in site.posts %}
+                    
+                    <!-- Entry -->
+                    <article class="row entry">
+                    
+                        <div class="entry-header">
+                            
+                            <div class="ten columns entry-title pull-right">
+                                <h3><a href="{{ post.url }}">{{ post.title | strip_html }}</a></h3>
+                            </div>
+                    
+                            <div class="two columns post-meta end">
+                                {% for tag in post.tags %}
+                                    <span style="color:#E63946; padding-right: 20px;">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                    
+                        </div>
+                    
+                        <div class="ten columns offset-2 post-content">
+                            {{ post.excerpt | strip_html }}
+                            </br>
+                            <a class="more-link" href={{ post.url }}>Read More<i class="fa fa-arrow-circle-o-right"></i></a></p>
+                        </div>
+                    
+                    </article>
+                    <hr>
+    
+                {% endfor %}
+            
+            </div>
+            <!-- primary end-->
+        </div>
+
+    </div>
+
+</div>
+<!-- content End-->

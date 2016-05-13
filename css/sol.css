@@ -1,0 +1,32 @@
+#banner {
+  background: #FFF;
+}
+
+header {
+  background: #1D3557;
+  /* background: #0479C9; */
+}
+
+#page-title {
+  background: #1D3557;
+}
+
+#page-title p {
+  color: #457B9D;
+}
+
+.publications ul li{
+  color: #000;
+  padding-left: 20px;
+  text-indent: -10px;
+}
+
+.publications ul li:before {
+  content: "•";
+  color: #E63946; 
+}
+
+a,
+a:visited { color: #457B9D; }
+a:hover,
+a:focus { color: #E63946; }
