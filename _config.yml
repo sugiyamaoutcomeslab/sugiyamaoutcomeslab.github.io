@@ -11,7 +11,7 @@ email: sugiyama.outcomes.lab@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   The website of the Sugiyama Research Group.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://sugiyamaoutcomeslab.github.io" # the base hostname & protocol for your site
+url: "https://sugiyamaoutcomeslab.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
