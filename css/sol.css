@@ -26,7 +26,5 @@ header {
   color: #E63946; 
 }
 
-a,
-a:visited { color: #457B9D; }
-a:hover,
-a:focus { color: #E63946; }
+#page-content a, a:visited { color: #457B9D; }
+#page-content a:hover, a:focus { color: #E63946; }

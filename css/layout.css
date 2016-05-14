@@ -1,3 +1,5 @@
+---
+---
 /*
 =====================================================================
 
@@ -28,13 +30,13 @@
 /* a. Common Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #D2D8D8 url(../images/bg.jpg); }
+body { background: #D2D8D8 url({{ site.baseurl }}/images/bg.jpg); }
 img { border-radius: 3px; }
 .content-outer { background: #fff }
 
 /* page title */
 #page-title {
-   /* background: #383232 url(../images/header-bg.jpg); */
+   /* background: #383232 url({{ site.baseurl }}/images/header-bg.jpg); */
    background: #086788;
    padding-top: 42px;
    padding-bottom: 54px;
@@ -169,7 +171,7 @@ img { border-radius: 3px; }
    border-radius: 3px;
 }
 #sidebar .widget .submit-search {
-	background:url(../images/search-icon.png) no-repeat;
+	background:url({{ site.baseurl }}/images/search-icon.png) no-repeat;
 	border:none;
 	cursor:pointer;
 	width:18px;
@@ -193,7 +195,7 @@ img { border-radius: 3px; }
 header {
    height: 96px;
    width: 100%;
-   background: #383232 url(../images/header-bg.jpg);
+   background: #383232 url({{ site.baseurl }}/images/header-bg.jpg);
 }
 
 /* header logo */
@@ -359,7 +361,7 @@ ul#nav ul li a {
 /* c. Intro Section - Main Page
 /* ------------------------------------------------------------------ */
 
-#intro { background: #383232 url(../images/header-bg.jpg); }
+#intro { background: #383232 url({{ site.baseurl }}/images/header-bg.jpg); }
 
 /* Flex Slider
 /* ------------------------------------------------------------------ */
@@ -468,14 +470,14 @@ ul#nav ul li a {
 
 .flex-direction-nav .flex-next {
 	right: 0px;
-	background: #1f2024 url(../images/direction-nav-right.png) no-repeat 47% 50%;
+	background: #1f2024 url({{ site.baseurl }}/images/direction-nav-right.png) no-repeat 47% 50%;
 	position: absolute;
 
 	border-radius: 3px 0 0 3px;
 }
 .flex-direction-nav .flex-prev {
 	left: 0px;
-	background: #1f2024 url(../images/direction-nav-left.png) no-repeat 53% 50%;
+	background: #1f2024 url({{ site.baseurl }}/images/direction-nav-left.png) no-repeat 53% 50%;
 	position: absolute;
 
 	border-radius: 0 3px 3px 0;
@@ -494,7 +496,7 @@ ul#nav ul li a {
 /* ------------------------------------------------------------------ */
 
 #info {
-   background: #fff url(../images/content-bg.jpg);
+   background: #fff url({{ site.baseurl }}/images/content-bg.jpg);
    padding-top: 60px;
    padding-bottom: 42px;
 }
@@ -513,7 +515,7 @@ ul#nav ul li a {
 /* ------------------------------------------------------------------ */
 
 #works {
-   background: #f5f5f5 url(../images/works-bg.jpg);
+   background: #f5f5f5 url({{ site.baseurl }}/images/works-bg.jpg);
    padding-top: 48px;
    padding-bottom: 36px;
    border-top: 1px solid #E3E8E8;
@@ -567,7 +569,7 @@ ul#nav ul li a {
 	transition: opacity 0.3s ease-in-out;
 
    border-radius: 3px 3px 0 0;
-   background: url(../images/overlay.png) repeat;
+   background: url({{ site.baseurl }}/images/overlay.png) repeat;
 }
 .portfolio-item .item-wrap .link-icon {
    display: block;
@@ -630,7 +632,7 @@ ul#nav ul li a {
 /* ------------------------------------------------------------------ */
 
 #journal {
-   background: #fff url(../images/content-bg.jpg);
+   background: #fff url({{ site.baseurl }}/images/content-bg.jpg);
    padding-top: 60px;
    padding-bottom: 48px;
 }
@@ -1182,8 +1184,8 @@ footer .copyright  li:first-child:before {
 	display: block;
 	width: 60px;
 	height: 40px;
-	background: url(../images/go-to-top.png) no-repeat 50% 50%;
-	background-color: #1f2024;
+	background: url({{ site.baseurl }}/images/go-to-top.png) no-repeat 50% 50%;
+	background-color: #1D3557;
 
 	-webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
@@ -1197,4 +1199,4 @@ footer .copyright  li:first-child:before {
    text-shadow: none;
    color: transparent;
 }
-#go-top a:hover { background-color: #0F9095; }
+#go-top a:hover { background-color: #E63946; }
