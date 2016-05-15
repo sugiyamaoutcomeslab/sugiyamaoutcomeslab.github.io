@@ -20,22 +20,23 @@
 		var fadeOutTime = 400; //how slow/fast you want the button to hide
 		var scrollSpeed = 300; //how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
 
-        // Show or hide the sticky footer button
-	    jQuery(window).scroll(function() {
+    // Show or hide the sticky footer button
+    jQuery(window).scroll(function() {
+      if (jQuery(window).scrollTop() >= pxShow) {
+        jQuery("#go-top").fadeIn(fadeInTime);
+      }
+      else {
+        jQuery("#go-top").fadeOut(fadeOutTime);
+      }
+    });
 
-			if (jQuery(window).scrollTop() >= pxShow) {
-				jQuery("#go-top").fadeIn(fadeInTime);
-			} else {
-				jQuery("#go-top").fadeOut(fadeOutTime);
-			}
-
-		});
-
-        // Animate the scroll to top
-		jQuery("#go-top a").click(function() {
-			jQuery("html, body").animate({scrollTop:0}, scrollSpeed);
-			return false;
-		});
+    // Animate the scroll to top
+    jQuery("#go-top a").click(function() {
+      jQuery("html, body").animate({
+        scrollTop: 0
+      }, scrollSpeed);
+      return false;
+    });
 
 
 /*----------------------------------------------------*/
