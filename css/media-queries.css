@@ -85,7 +85,7 @@
 
       position: relative;
       top: 36px;
-      right: 36px;
+      right: 30px;
    }
 
 	#nav-wrap > a:before,
@@ -94,7 +94,7 @@
 		border: 3px solid #fff;
 		top: 30%;
 		left: 20%;
-		right: 15%;
+		right: 20%;
 		content: '';
 	}
    #nav-wrap > a:after { top: 60%; }
@@ -242,6 +242,24 @@
       text-align: center;
    }
 
+   /* people
+   ------------------------------------------------------------------------ */
+   .people {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+   
+   .people h4 {
+      text-align: center;
+   }
+   
+   .people span {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+   }
+   
    /* footer
    ------------------------------------------------------------------------ */
    footer .copyright li:before { content: none; }

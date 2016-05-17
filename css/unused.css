@@ -578,3 +578,48 @@ ol.commentlist {
 .portfolio #portfolio-wrapper {
    margin-top: 6px;
 }
+
+
+/* ------------------------------------------------------------------ */
+/* People
+/* ------------------------------------------------------------------ */
+/* Team Members */
+#team-wrapper {
+   padding-right: 5px;
+   padding-left: 5px;
+}
+
+#team-wrapper .member {
+   margin-bottom: 24px;
+   margin-top: 12px;
+}
+
+#team-wrapper img {
+	margin-bottom: 10px;
+}
+
+#team-wrapper h5 {
+   font: 14px/22px notosans-bold, sans-serif;
+}
+
+#team-wrapper span {
+   position: relative;
+   top: -6px;
+   font-size: 13px;
+   line-height: 18px;
+   color: #969696;
+}
+#team-wrapper .member-social {
+   font-size: 20px;
+   font-weight: normal;
+   line-height: 18px;
+   color: #969696;
+   margin: -12px 0 0 0;
+   padding: 0;
+}
+#team-wrapper .member-social li {
+   display: inline-block;
+   margin-right: 15px;
+}
+#team-wrapper .member-social li a { color: #424242; }
+#team-wrapper .member-social li a:hover { color: #11ABB0; }
