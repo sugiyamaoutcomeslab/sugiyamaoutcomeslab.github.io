@@ -15,3 +15,8 @@ exclude:
 
 collections:
   - publications
+  - projects
+
+collections:
+  projects:
+    output: true

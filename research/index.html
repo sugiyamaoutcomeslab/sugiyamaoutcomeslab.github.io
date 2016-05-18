@@ -28,7 +28,7 @@ title: "Research"
         <div class="twelve columns">
             <div class="post">
             
-                {% for post in site.posts %}
+                {% for project in site.projects %}
                     
                     <!-- Entry -->
                     <article class="row entry">
@@ -36,21 +36,22 @@ title: "Research"
                         <div class="entry-header">
                             
                             <div class="ten columns entry-title pull-right">
-                                <h3><a href="{{ post.url }}">{{ post.title | strip_html }}</a></h3>
+                                <h3><a href="{{ project.url }}">{{ project.project_title }}</a></h3>
                             </div>
                     
                             <div class="two columns post-meta end">
-                                {% for tag in post.tags %}
-                                    <span style="color:#E63946; padding-right: 20px;">{{ tag }}</span>
+                                <h5 style="color: #E63946;">Tags</h5>
+                                {% for tag in project.tags %}
+                                    <span style="color:#FFBF00; font-family: notosans-bold; padding-right: 20px;">{{ tag }}</span>
                                 {% endfor %}
                             </div>
                     
                         </div>
                     
                         <div class="ten columns offset-2 post-content">
-                            {{ post.excerpt | strip_html }}
+                            {{ project.excerpt }}
                             </br>
-                            <a class="more-link" href={{ post.url }}>Read More <i class="fa fa-arrow-circle-o-right"></i></a></p>
+                            <a class="more-link" href={{ project.url }}>Read More <i class="fa fa-arrow-circle-o-right"></i></a>
                         </div>
                     
                     </article>
