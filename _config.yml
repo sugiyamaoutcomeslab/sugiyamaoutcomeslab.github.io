@@ -14,9 +14,7 @@ exclude:
   - run.sh
 
 collections:
-  - publications
-  - projects
-
-collections:
+  publications:
+  
   projects:
     output: true

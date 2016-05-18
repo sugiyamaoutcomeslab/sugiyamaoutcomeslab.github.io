@@ -29,37 +29,11 @@ title: "Publications"
             <div class="twelve columns">
                 <!-- List publications by year -->
                 <div class="publications">
-                    {% assign y = "on" %}
                     <ul>
                         {% for publication in site.publications %}
-                            {% if publication.year == "2016" %}
-                                {% if y == "on" %}<h3>2016</h3>{% endif %}{% assign y = "off" %}
-                                <li>
-                                    <a href={{ publication.pubmed }}>{{ publication.reference }}</a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                    {% assign y = "on" %}
-                    <ul>
-                        {% for publication in site.publications %}
-                            {% if publication.year == "2015" %}
-                                {% if y == "on" %}<h3>2015</h3>{% endif %}{% assign y = "off" %}
-                                <li>
-                                    <a href={{ publication.pubmed }}>{{ publication.reference }}</a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                    {% assign y = "on" %}
-                    <ul>
-                        {% for publication in site.publications %}
-                            {% if publication.year == "2014" %}
-                                {% if y == "on" %}<h3>2014</h3>{% endif %}{% assign y = "off" %}
-                                <li>
-                                    <a href={{ publication.pubmed }}>{{ publication.reference }}</a>
-                                </li>
-                            {% endif %}
+                        <li>
+                            <a href={{ publication.pubmed }}>{{ publication.reference }}</a>
+                        </li>
                         {% endfor %}
                     </ul>
                 </div>
