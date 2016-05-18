@@ -27,29 +27,40 @@ title: "Publications"
         <div class="row">
 
             <div class="twelve columns">
+                <!-- List publications by year -->
                 <div class="publications">
-                    <h3>2015</h3>
+                    {% assign y = "on" %}
                     <ul>
-                        <li>
-                            <a href="http://www.ncbi.nlm.nih.gov/pubmed/25504451">
-                                Tam SF, Au JT, Chung PJ, Duncan A, Alfonso AE, Sugiyama G. Is it time to rethink our management of dialysis patients undergoing elective ventral hernia repair? Analysis of the ACS NSQIP database. Hernia. 2015;19(5):827-33.
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4424966/">
-                                Chung PJ, Carter T, Tam S, Alfonso A, Burack J, Sugiyama. G. Development of a 30-day Risk Index in Patients Undergoing Coronary Artery Bypass Graft Surgery Using the American College of Surgeons National Surgical Quality Improvement (Journal of Cardiothoracic Surgery.2015,10:62 DOI:10.1186/s13019-015-0269-y)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4487955/">
-                                Chung PJ, Policastro L, Huang R, Schwartzman A, Lee R, Alfonso A, Sugiyama G. Single Site Laparoscopic Cholecystectomy at a Safety Net Hospital. JSLS. 2015 Jul-Sep; 19(3): e2015.00033.
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4756357/">
-                                Sugiyama G., Chivukula S, Chung PJ, Alfonso A. Robotic Assisted Trans-Abdominal Pre-Peritoneal Ventral Hernia Repair. JSLS. 2015 Oct-Dec; 19(4): e2015.00092.
-                            </a>
-                        </li>
+                        {% for publication in site.publications %}
+                            {% if publication.year == "2016" %}
+                                {% if y == "on" %}<h3>2016</h3>{% endif %}{% assign y = "off" %}
+                                <li>
+                                    <a href={{ publication.pubmed }}>{{ publication.reference }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% assign y = "on" %}
+                    <ul>
+                        {% for publication in site.publications %}
+                            {% if publication.year == "2015" %}
+                                {% if y == "on" %}<h3>2015</h3>{% endif %}{% assign y = "off" %}
+                                <li>
+                                    <a href={{ publication.pubmed }}>{{ publication.reference }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% assign y = "on" %}
+                    <ul>
+                        {% for publication in site.publications %}
+                            {% if publication.year == "2014" %}
+                                {% if y == "on" %}<h3>2014</h3>{% endif %}{% assign y = "off" %}
+                                <li>
+                                    <a href={{ publication.pubmed }}>{{ publication.reference }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

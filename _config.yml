@@ -12,3 +12,6 @@ permalink: pretty
 
 exclude:
   - run.sh
+
+collections:
+  - publications
