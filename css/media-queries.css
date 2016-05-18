@@ -260,6 +260,12 @@
       text-align: center;
    }
    
+   .people .img-circle {
+      display: block;
+      margin: 10px auto;
+      width: 60%;
+   }
+   
    /* footer
    ------------------------------------------------------------------------ */
    footer .copyright li:before { content: none; }
@@ -316,6 +322,12 @@
    #nav-wrap ul#nav {
       top: 72px;
       right: 0px;
+   }
+
+   .people .img-circle {
+      display: block;
+      margin: 10px auto;
+      width: 70%;
    }
 
    footer { margin-top: 48px; }
