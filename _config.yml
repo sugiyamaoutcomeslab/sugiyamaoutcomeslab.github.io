@@ -19,3 +19,6 @@ collections:
   projects:
     output: true
     permalink: /research/:path/
+  
+  news:
+    
