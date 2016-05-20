@@ -26,17 +26,19 @@ title: SOL
     <div id="page-content" class="row page">
 
         <div class="twelve columns">
-            <h1 style="text-align: center;">News</h1>
-
-            {% assign sorted_news = (site.news | sort: 'date') | reverse %}
-            {% for news in sorted_news %}
-                <h3>{{ news.title }}</h3>
-                <h5>{{ news.date | date: '%B %d, %Y' }}</h5>
-                <h5>{{ news.location }}</h5>
-                
-                {{ news.content }}
-                <hr>
-            {% endfor %}
+            <div class="news">
+                <h1 style="text-align: center;">News</h1>
+    
+                {% assign sorted_news = (site.news | sort: 'date') | reverse %}
+                {% for news in sorted_news %}
+                    <h3>{{ news.title }}</h3>
+                    <h5>{{ news.date | date: '%B %d, %Y' }}</h5>
+                    <h5>{{ news.location }}</h5>
+                    
+                    {{ news.content }}
+                    <hr>
+                {% endfor %}
+            </div>
         </div>
 
     </div>
