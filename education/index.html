@@ -11,21 +11,20 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Biliary Tree" startnode="1" creator="Twine" creator-version="2.0.11" ifid="27C8B56F-AB4E-47D9-8744-C1869CF0AED5" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Emergency Room" tags="" position="1046,0">You were just about to get some sleep when the beeper went off. It&#39;s the ED. Your &quot;friends&quot; there have just given you a gift. Three of them.
-
-You arrive in the ED and see Andy, the senior ED resident.
+<tw-storydata name="Biliary Tree" startnode="20" creator="Twine" creator-version="2.0.11" ifid="27C8B56F-AB4E-47D9-8744-C1869CF0AED5" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="Emergency Room" tags="" position="1050,73">You arrive in the ED and see Andy, the senior ED resident.
 
 &quot;Hey! Have you seen the patients? Do you have dispos on them?&quot;
 
 You remind Andy that you&#39;ve just arrived. It takes a lot of effort to smile and somehow you keep your mouth shut. 
 
-[[You go to see the patients |Emergency Room Consults]].
-</tw-passagedata>
-<tw-passagedata pid="2" name="Acute Cholecystitis" tags="" position="735,215">You enter the examine room and see Ms. A.
+[[You go to see the patients |Emergency Room Consults]].</tw-passagedata>
+<tw-passagedata pid="2" name="Acute Cholecystitis" tags="" position="728,159">You enter the examine room and see Ms. A.
 
-She is a 36 female who presents with {(set: $ac_duration to (either: 2, 4)) (print: $ac_duration)} days of abominal pain. In the past 24 hours she has had fevers to 101.7F, has chills, and also complains of nausea and 2 episodes of vomiting.
+She is a 36 female who presents with {(if: $level &lt; 3)[(set: $ac_duration to 2)](else:)[(set: $ac_duration to 4)] (print: $ac_duration)} days of abominal pain. In the past 24 hours she has had fevers to 101.7F, has chills, and also complains of nausea and 2 episodes of vomiting.
 
-[[Get more information | Acute Cholecystitis History]]
+[[Get more information |Acute Cholecystitis History]]
 {
 (if: $acute_cholecystitis is 0)[
 	(set: $ac_resuscitation to 0)
@@ -40,19 +39,19 @@ She is a 36 female who presents with {(set: $ac_duration to (either: 2, 4)) (pri
 ]
 }</tw-passagedata>
 <tw-passagedata pid="3" name="Cholangiocarcinoma" tags="" position="1555,2">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="4" name="Choledocholithiasis" tags="" position="1060,476">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="5" name=" Acute Cholecystitis History" tags="" position="583,219">&#39;&#39;Past Medical History:&#39;&#39; Obesity (BMI 35), Asthma
+<tw-passagedata pid="4" name="Choledocholithiasis" tags="" position="1195,473">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="5" name="Acute Cholecystitis History" tags="" position="571,134">&#39;&#39;Past Medical History:&#39;&#39; Obesity (BMI 35), Asthma
 &#39;&#39;Past Surgical History:&#39;&#39; Laparoscopic Appendectomy
 &#39;&#39;Medications:&#39;&#39; Albuterol inhaler
 &#39;&#39;Social History:&#39;&#39; No Tobacco/Alcohol/Drugs
 &#39;&#39;Allergies:&#39;&#39; NKDA
 
-[[Perform a physical exam | Acute Cholecystitis Physical Exam]]
-[[Resuscitate the patient | Acute Cholecystitis Resuscitation]]
-[[Get diagnostic tests | Acute Cholecystitis Diagnostic Tests]]
-[[Perform an intervention | Acute Cholecystitis Treatment]]
+[[Perform a physical exam |Acute Cholecystitis Physical Exam]]
+[[Resuscitate the patient |Acute Cholecystitis Resuscitation]]
+[[Get diagnostic tests |Acute Cholecystitis Diagnostic Tests]]
+[[Perform an intervention |Acute Cholecystitis Treatment]]
 </tw-passagedata>
-<tw-passagedata pid="6" name=" Acute Cholecystitis Physical Exam" tags="" position="404,211">{(if: $ac_duration is 2)[
+<tw-passagedata pid="6" name="Acute Cholecystitis Physical Exam" tags="" position="341,137">{(if: $ac_duration is 2)[
 &#39;&#39;Vitals&#39;&#39;: T: 100F, HR: 76, BP: 125/78
 ](else:)[
 &#39;&#39;Vitals&#39;&#39;: T: 102F, HR: 100, BP: 90/60
@@ -61,12 +60,12 @@ She is a 36 female who presents with {(set: $ac_duration to (either: 2, 4)) (pri
 &#39;&#39;HEENT:&#39;&#39; no scleral icterus
 &#39;&#39;Abdomen:&#39;&#39; obese, soft, tender to palpation in RUQ, (+) Murphy&#39;s sign, no rebound tenderness, voluntary guarding
 
-[[Resuscitate the patient | Acute Cholecystitis Resuscitation]]
-[[Get diagnostic tests | Acute Cholecystitis Diagnostic Tests]]
-[[Perform an intervention | Acute Cholecystitis Treatment]]
+[[Resuscitate the patient |Acute Cholecystitis Resuscitation]]
+[[Get diagnostic tests |Acute Cholecystitis Diagnostic Tests]]
+[[Perform an intervention |Acute Cholecystitis Treatment]]
 {(set: $ac_physical_exam to 1)}</tw-passagedata>
-<tw-passagedata pid="7" name=" Acute Cholecystitis Resuscitation" tags="" position="395,374">{(if: $ac_physical_exam is 0)[
-You should probably [[examine| Acute Cholecystitis Physical Exam]] the patient first.&lt;br&gt;
+<tw-passagedata pid="7" name="Acute Cholecystitis Resuscitation" tags="" position="263,325">{(if: $ac_physical_exam is 0)[
+You should probably [[examine|Acute Cholecystitis Physical Exam]] the patient first.&lt;br&gt;
 ](else:)[
 (if: $ac_resuscitation is 0)[
 Like a good surgical resident, you decide to begin resuscitating the patient. But what to do? What would your chief resident do?&lt;br&gt;
@@ -90,7 +89,7 @@ Did you want to do more?&lt;br&gt;
 Start 2 large bore IVs? (click: &quot; 2 large bore IVs&quot;)[ You also start 1 L of crystalloids.(set: $ac_resuscitation to $ac_resuscitation + 1)(set: $ac_resuscitation_iv to 1)]
 ]&lt;br&gt;
 (if: $ac_resuscitation_foley is 0)[
-Insert a Foley catheter? (click: &quot; Foley catheter&quot;)[ (if: $ac_duration is 2)[ You have second thoughts and hold off for now.](else:)[ 200cc of dark urine comes out.](set: $ac_resuscitation to $ac_resuscitation + 2)(set: ac_resuscitation_foley to 1)]
+Insert a Foley catheter? (click: &quot; Foley catheter&quot;)[ (if: $ac_duration is 2)[ You have second thoughts and hold off for now.](else:)[ 200cc of dark urine comes out.](set: $ac_resuscitation to $ac_resuscitation + 2)(set: $ac_resuscitation_foley to 1)]
 ]&lt;br&gt;
 (if: $ac_resuscitation_aline is 0)[
 Start an Arterial line? (click: &quot; Arterial line&quot;)[ You have second thoughts and hold off for now. (set: $ac_resuscitation to $ac_resuscitation + 4)(set: $ac_resuscitation_aline to 1)]
@@ -100,10 +99,10 @@ Start a Central line (click: &quot; Central line&quot;)[ You have second thought
 ]&lt;br&gt;
 ]
 &lt;br&gt;
-[[Get diagnostic tests | Acute Cholecystitis Diagnostic Tests]]&lt;br&gt;
-[[Perform an intervention | Acute Cholecystitis Treatment]]&lt;br&gt;
+[[Get diagnostic tests |Acute Cholecystitis Diagnostic Tests]]&lt;br&gt;
+[[Perform an intervention |Acute Cholecystitis Treatment]]&lt;br&gt;
 ]}</tw-passagedata>
-<tw-passagedata pid="8" name=" Acute Cholecystitis Diagnostic Tests" tags="" position="580,357">You wonder what tests you should order.
+<tw-passagedata pid="8" name="Acute Cholecystitis Diagnostic Tests" tags="" position="665,331">You wonder what tests you should order.
 
 {(if: $ac_labs is 0)[
 &#39;&#39;Laboratory tests&#39;&#39;? (click: &quot;Laboratory tests&quot;)[{(if: $ac_duration is 2)[&lt;br&gt;CBC: 12&gt;14/42&lt;200&lt;br&gt;BMP: 140/4.0/110/23/20/0.9/120&lt;br&gt;LFT: 8/4/68/76/200/0.4&lt;br&gt;Beta HCG: (-)](else:)[&lt;br&gt;CBC: 15&gt;14/42&lt;200&lt;br&gt;BMP: 140/3.5/110/22/20/0.9/120&lt;br&gt;LFT: 8/4/68/76/240/0.4&lt;br&gt;Beta HCG: (-)]
@@ -140,7 +139,7 @@ Start a Central line (click: &quot; Central line&quot;)[ You have second thought
 ]
 }
 
-[[Perform an intervention | Acute Cholecystitis Treatment]]
+[[Perform an intervention |Acute Cholecystitis Treatment]]
 {
 (if: $ac_duration is 2)[
 (set: $ac_resuscitation_threshold to 1)
@@ -152,25 +151,25 @@ Start a Central line (click: &quot; Central line&quot;)[ You have second thought
 (if: $ac_resuscitation &gt; $ac_resuscitation_threshold)[]
 (set: $ac_diagnosis to 1)
 }</tw-passagedata>
-<tw-passagedata pid="9" name=" Acute Cholecystitis Treatment" tags="" position="481,541">{(if: $ac_diagnosis is 0)[
-You must be House. You already know what you&#39;re treating? Are you sure you don&#39;t want to perform some [[tests| Acute Cholecystitis Diagnostic Tests]] before you go any further?
+<tw-passagedata pid="9" name="Acute Cholecystitis Treatment" tags="" position="456,494">{(if: $ac_diagnosis is 0)[
+You must be House. You already know what you&#39;re treating? Are you sure you don&#39;t want to perform some [[tests|Acute Cholecystitis Diagnostic Tests]] before you go any further?
 ](else:)[
 You&#39;re about to call your chief resident. What&#39;s the plan?&lt;br&gt;
 &lt;br&gt;
-[[Conservative management | Acute Cholecystitis Conservative Management]] for now.&lt;br&gt;
-Schedule the patient for an [[ERCP | Acute Cholecystitis ERCP]].&lt;br&gt;
-Schedule the patient for a [[Percutaneous Cholecystostomy | Acute Cholecystitis Percutaneous Cholecystostomy]].&lt;br&gt;
-Preop the patient for a [[Laparoscopic Cholecystectomy | Acute Cholecystitis Laparoscopic Cholecystectomy]].&lt;br&gt;
-Preop the patient for an [[Open Cholecystectomy | Acute Cholecystitis Open Cholecystectomy]].&lt;br&gt;
-Preop the patient for an [[Exploratory Laparotomy | Acute Cholecystitis Exploratory Laparotomy]].
+[[Conservative management |Acute Cholecystitis Conservative Management]] for now.&lt;br&gt;
+Schedule the patient for an [[ERCP |Acute Cholecystitis ERCP]].&lt;br&gt;
+Schedule the patient for a [[Percutaneous Cholecystostomy |Acute Cholecystitis Percutaneous Cholecystostomy]].&lt;br&gt;
+Preop the patient for a [[Laparoscopic Cholecystectomy |Acute Cholecystitis Laparoscopic Cholecystectomy]].&lt;br&gt;
+Preop the patient for an [[Open Cholecystectomy |Acute Cholecystitis Open Cholecystectomy]].&lt;br&gt;
+Preop the patient for an [[Exploratory Laparotomy |Acute Cholecystitis Exploratory Laparotomy]].
 ]}</tw-passagedata>
-<tw-passagedata pid="10" name=" Acute Cholecystitis Conservative Management" tags="" position="302,650">{(if: $ac_duration is 2)[
-The patient has had symptoms for less than 72 hours. You must have forgotten this. [[Try again| Acute Cholecystitis Treatment]].
+<tw-passagedata pid="10" name="Acute Cholecystitis Conservative Management" tags="" position="453,674">{(if: $ac_duration is 2)[
+The patient has had symptoms for less than 72 hours. You must have forgotten this. [[Try again|Acute Cholecystitis Treatment]].
 ](else:)[
-Fair enough. You start the patient on IV Cipro and IV Flagyl. The following day she has improvements in her symptoms. By Hospital day 5 her pain has resolved and you send her out on PO antibiotics. You schedule her for an [[interval cholecystectomy| Acute Cholecystitis Laparoscopic Cholecystectomy]].(set: $ac_interval_laparoscopic_cholecystectomy to 1)
+Fair enough. You start the patient on IV Cipro and IV Flagyl. The following day she has improvements in her symptoms. By Hospital day 5 her pain has resolved and you send her out on PO antibiotics. You schedule her for an [[interval cholecystectomy|Acute Cholecystitis Laparoscopic Cholecystectomy]].(set: $ac_interval_laparoscopic_cholecystectomy to 1)
 ]}</tw-passagedata>
-<tw-passagedata pid="11" name=" Acute Cholecystitis ERCP" tags="" position="66,420">Sorry doc. You must be really confused. [[Try again| Acute Cholecystitis Treatment]].</tw-passagedata>
-<tw-passagedata pid="12" name=" Acute Cholecystitis Laparoscopic Cholecystectomy" tags="" position="478,836">{(if: $ac_interval_laparoscopic_cholecystectomy is 1)[
+<tw-passagedata pid="11" name="Acute Cholecystitis ERCP" tags="" position="64,495">Sorry doc. You must be really confused. [[Try again|Acute Cholecystitis Treatment]].</tw-passagedata>
+<tw-passagedata pid="12" name="Acute Cholecystitis Laparoscopic Cholecystectomy" tags="" position="643,677">{(if: $ac_interval_laparoscopic_cholecystectomy is 1)[
 6 weeks later you meet the patient in the ambulatory surgical center.
 &lt;br&gt;
 You bring the patient to the OR and place the patient in supine position on the OR table and place intermittent compression stockings on her. 
@@ -236,11 +235,11 @@ Now back to work, you have [[patients to see|Emergency Room Consults]].
 The dissection is very difficult. The tissue is extremely edematous and friable. Despite your best efforts you cannot identify the Critical View of Safety.{(set: $ac_difficult_laparoscopic_cholecystectomy to 1)}&lt;br&gt;
 &lt;br&gt;
 [[All you need is more time | Acute Cholecystitis Difficult Laparoscopic Cholecystectomy]]&lt;br&gt;
-[[Convert to open | Acute Cholecystitis Open Cholecystectomy]]&lt;br&gt;
+[[Convert to open |Acute Cholecystitis Open Cholecystectomy]]&lt;br&gt;
 ]}
 ]}</tw-passagedata>
-<tw-passagedata pid="13" name=" Acute Cholecystitis Open Cholecystectomy" tags="" position="647,507">{(if: $ac_duration is 2)[
-Hard to believe that your attending on call doesn&#39;t do minimally invasive surgery. Why don&#39;t you talk things over again before proceeding. [[Try again | Acute Cholecystitis Treatment]].
+<tw-passagedata pid="13" name="Acute Cholecystitis Open Cholecystectomy" tags="" position="646,493">{(if: $ac_duration is 2)[
+Hard to believe that your attending on call doesn&#39;t do minimally invasive surgery. Why don&#39;t you talk things over again before proceeding. [[Try again |Acute Cholecystitis Treatment]].
 ](else:)[
 {(if: $ac_difficult_laparoscopic_cholecystectomy is 1)[
 You convert to Open and make a right subcostal incision.
@@ -256,12 +255,12 @@ You leave behind a JP drain and call it a day.
 No time to congratulate yourself. You have [[patients to see|Emergency Room Consults]].
 ](else:)[
 &lt;!-- Duration &gt; 3 days --&gt;
-Your chief resident doesn&#39;t think that this is the best choice at this time. Why don&#39;t you [[try again | Acute Cholecystitis Treatment]].
+Your chief resident doesn&#39;t think that this is the best choice at this time. Why don&#39;t you [[try again |Acute Cholecystitis Treatment]].
 ]}
 ]}</tw-passagedata>
-<tw-passagedata pid="14" name=" Acute Cholecystitis Exploratory Laparotomy" tags="" position="71,295">Whoa there. The patient has RUQ pain, not a bullet through the torso. [[Try again| Acute Cholecystitis Treatment]].</tw-passagedata>
-<tw-passagedata pid="15" name=" Acute Cholecystitis Percutaneous Cholecystostomy" tags="" position="62,550">You might want to rethink that. This patient is young and is relatively low risk for surgery. Why don&#39;t you [[try again| Acute Cholecystitis Treatment]].</tw-passagedata>
-<tw-passagedata pid="16" name=" Acute Cholecystitis Difficult Laparoscopic Cholecystectomy" tags="" position="472,1021">{&lt;!-- Delayed and Duration &gt; 4 days --&gt;
+<tw-passagedata pid="14" name="Acute Cholecystitis Exploratory Laparotomy" tags="" position="72,353">Whoa there. The patient has RUQ pain, not a bullet through the torso. [[Try again|Acute Cholecystitis Treatment]].</tw-passagedata>
+<tw-passagedata pid="15" name="Acute Cholecystitis Percutaneous Cholecystostomy" tags="" position="68,657">You might want to rethink that. This patient is young and is relatively low risk for surgery. Why don&#39;t you [[try again|Acute Cholecystitis Treatment]].</tw-passagedata>
+<tw-passagedata pid="16" name=" Acute Cholecystitis Difficult Laparoscopic Cholecystectomy" tags="" position="644,831">{&lt;!-- Delayed and Duration &gt; 4 days --&gt;
 &lt;!-- Give Player choice of Partial Cholecystectomy or IOC --&gt;
 &lt;!-- If Player chooses neither of these then a CBD injury will occur --&gt;}
 You&#39;ve been in the OR for 3 hours now. The operative field is a friable mess. You see 3 structures at around the Infundibulum.
@@ -272,6 +271,9 @@ Perform a [[partial cholecystectomy|Acute Cholecystitis Laparoscopic Partial Cho
 {(if: $acute_cholecystitis is 0)[
 36 female with [[RUQ Pain|Acute Cholecystitis]].&lt;br&gt;
 ]
+(if: $cbd_injury is 0)[
+36 female status post [[laparoscopic cholecystectomy|Acute Cholecystitis CBD Injury Late]] 4 days ago.&lt;br&gt;
+]
 (if: $cholangiocarcinoma is 0)[
 58 male who appears [[jaundiced|Cholangiocarcinoma]].&lt;br&gt;
 ]
@@ -279,12 +281,184 @@ Perform a [[partial cholecystectomy|Acute Cholecystitis Laparoscopic Partial Cho
 40 male with [[Epigastric Pain|Choledocholithiasis]].
 ]
 }</tw-passagedata>
-<tw-passagedata pid="18" name="Acute Cholecystitis Laparoscopic Partial Cholecystectomy" tags="" position="637,837">You open the Gallbladder and suction out the bile and extract the stones.
+<tw-passagedata pid="18" name="Acute Cholecystitis Laparoscopic Partial Cholecystectomy" tags="" position="815,665">You open the Gallbladder and suction out the bile and extract the stones.
 You leave a cuff of Gallbladder along the Cystic Plate.
 You perform an Intraoperative Cholangiogram and to your relief you can see the Cystic Duct communicate with the Common Bile Duct.
 You leave drains and bail out.
 No time to rest there are [[patients to see|Emergency Room Consults]].</tw-passagedata>
-<tw-passagedata pid="19" name="Acute Cholecystitis CBD Injury" tags="" position="653,1026">&lt;!-- Continue another day --&gt;</tw-passagedata>
+<tw-passagedata pid="19" name="Acute Cholecystitis CBD Injury" tags="" position="825,1007">&lt;!-- Continue another day --&gt;
+You continue to dissect around the Infundibulum and decide to place clips on the duct-like structure comming off the neck of the Gallbladder.
+
+The clips are placed and you transect. As you start to dissect the Gallbladder off the Cystic Plate, you realize that the third structure you saw earlier is actually attached to the Gallbladder and that the duct-like structure you clipped earlier originates more medially.
+
+[[Close the patient|Acute Cholecystitis CBD Injury Late]]
+[[Convert to open|Acute Cholecystitis Convert to Open]]
+[[Perform Intraoperative IOC|Acute Cholecystitis IOC]]
+{(set: $ac_cbd_injury to 1)}</tw-passagedata>
+<tw-passagedata pid="20" name="Acute Cholecystitis CBD Injury Late" tags="" position="1052,1231">{(if: $ac_cbd_injury is 1)[
+The patient has an unremarkable postoperative course and is discharged from the hospital on postoperative day 2.&lt;br&gt;
+&lt;br&gt;
+However on postoperative day 4 she arrives again at the emergency room. Happens to be the same day you&#39;re on call.
+](else:)[
+In the exam room you meet Ms. B&lt;br&gt;
+&lt;br&gt;
+She is a 36 year old female who underwent laparoscopic cholecystectomy for Acute Cholecystitis 4 days ago at an outside institution.
+]}
+
+She&#39;s complaining of &quot;discomfort&quot; in the RUQ as well as chills.
+
+[[Get more information | CBD Injury History]]</tw-passagedata>
+<tw-passagedata pid="21" name="Acute Cholecystitis IOC" tags="" position="823,815">You perform an Intraoperative Cholangiogram through what you believe to be the ligated Cystic Duct. 
+
+Instead you see the Common Bile Duct distal to the point of resection.
+
+You [[convert to open.|Acute Cholecystitis Convert to Open]] </tw-passagedata>
+<tw-passagedata pid="22" name="Acute Cholecystitis Convert to Open" tags="" position="972,1015">You create a right subcostal incision and as you carefully dissect you note that the Common Bile Duct has been completely transected just proximal to the takeoff of the Cystic Duct.
+
+You complete the Cholecystectomy.
+
+[[Close the patient|Acute Cholecystitis CBD Injury Late]]
+Perform a [[Roux-en-Y Hepatojejunostomy|Acute Cholecystitis CBD Injury Early]]</tw-passagedata>
+<tw-passagedata pid="23" name="Acute Cholecystitis CBD Injury Early" tags="" position="967,815">To perform the Roux-en-Y Hepaticojejunostomy you:
+
+Carefully perform your Portal dissection.
+
+You mobilize the Duodenum and Omentum away from the Porta Hepatis.
+
+You perform an &quot;anterior-only&quot; dissection of the Hepatic Ducts and expose the bifurcation of the Right and Left Hepatic Ducts.
+
+You create a Roux-en-Y limb, making sure that it is of sufficient length to be tension free.
+
+You then transect the extra-Hepatic portion of the Hepatic Duct at the level of the bifurcation.
+
+You then perform a mucosa-to-mucosa Biliary-Enteric anastomosis using absorbable monofilament sutures.
+
+You place drains and then close the abdomen.
+
+You have a lot to tell the patient and her family. You&#39;ve learned your lesson. Won&#39;t happen with the [[next patient|Emergency Room Consults]].</tw-passagedata>
+<tw-passagedata pid="24" name="Call Room" tags="" position="899,35">You were just about to get some sleep when the beeper went off. It&#39;s the ED. Your &quot;friends&quot; there have just given you a gift. Three of them.
+
+You are a: 
+[[PGY 1{(set: $level to 1)}|Emergency Room]]
+[[PGY 2{(set: $level to 2)}|Emergency Room]]
+[[PGY 3{(set: $level to 3)}|Emergency Room]]
+[[PGY 4{(set: $level to 4)}|Emergency Room]]
+</tw-passagedata>
+<tw-passagedata pid="25" name=" CBD Injury History" tags="" position="1059,1368">&#39;&#39;Past Medical History:&#39;&#39; Obesity (BMI 35), Asthma
+&#39;&#39;Past Surgical History:&#39;&#39; Laparoscopic Cholecystectomy, Laparoscopic Appendectomy
+&#39;&#39;Medications:&#39;&#39; Albuterol inhaler
+&#39;&#39;Social History:&#39;&#39; No Tobacco/Alcohol/Drugs
+&#39;&#39;Allergies:&#39;&#39; NKDA
+
+[[Perform a physical exam |CBD Injury Physical Exam]]
+[[Resuscitate the patient |CBD Injury Resuscitation]]
+[[Get diagnostic tests |CBD Injury Diagnostic Tests]]
+[[Perform an intervention |CBD Injury Treatment]]
+</tw-passagedata>
+<tw-passagedata pid="26" name="CBD Injury Physical Exam" tags="" position="1056,1569">&#39;&#39;Vitals&#39;&#39;: T: 102F, HR: 100, BP: 90/60
+&#39;&#39;General:&#39;&#39; AAOx3, no jaundice
+&#39;&#39;HEENT:&#39;&#39; no scleral icterus
+&#39;&#39;Abdomen:&#39;&#39; obese, soft, tender to palpation in RUQ, (+) Murphy&#39;s sign, no rebound tenderness, voluntary guarding
+
+[[Resuscitate the patient |CBD Injury Resuscitation]]
+[[Get diagnostic tests |CBD Injury Diagnostic Tests]]
+[[Perform an intervention |CBD Injury Treatment]]
+{(set: $cbd_injury_physical_exam to 1)}</tw-passagedata>
+<tw-passagedata pid="27" name="CBD Injury Resuscitation" tags="" position="1297,1670">{(if: $cbd_injury_physical_exam is 0)[
+You should probably [[examine|CBD Injury Physical Exam]] the patient first.&lt;br&gt;
+](else:)[
+(if: $cbd_injury_resuscitation is 0)[
+Like a good surgical resident, you decide to begin resuscitating the patient. But what to do? What would your chief resident do?&lt;br&gt;
+&lt;br&gt;
+(if: $cbd_injury_resuscitation_iv is 0)[
+Start 2 large bore IVs? (click: &quot; 2 large bore IVs&quot;)[ You also start 1 L of crystalloids.(set: $cbd_injury_resuscitation to $cbd_injury_resuscitation + 1)(set: $cbd_injury_resuscitation_iv to 1)]
+]&lt;br&gt;
+(if: $cbd_injury_resuscitation_foley is 0)[
+Insert a Foley catheter? (click: &quot; Foley catheter&quot;)[ 50cc of dark urine comes out.(set: $cbd_injury_resuscitation to $cbd_injury_resuscitation + 2)(set: $cbd_injury_resuscitation_foley to 1)]
+]&lt;br&gt;
+(if: $cbd_injury_resuscitation_aline is 0)[
+Start an Arterial line? (click: &quot; Arterial line&quot;)[ You have second thoughts and hold off for now. (set: $cbd_injury_resuscitation to $cbd_injury_resuscitation + 4)(set: $cbd_injury_resuscitation_aline to 1)]
+]&lt;br&gt;
+(if: $cbd_injury_resuscitation_cvc is 0)[
+Start a Central line (click: &quot; Central line&quot;)[ You have second thoughts and hold off for now. (set: $cbd_injury_resuscitation to $cbd_injury_resuscitation + 8)(set: $cbd_injury_resuscitation_cvc to 1)]
+]&lt;br&gt;
+](else:)[
+Did you want to do more?&lt;br&gt;
+&lt;br&gt;
+(if: $cbd_injury_resuscitation_iv is 0)[
+Start 2 large bore IVs? (click: &quot; 2 large bore IVs&quot;)[ You also start 1 L of crystalloids.(set: $cbd_injury_resuscitation to $cbd_injury_resuscitation + 1)(set: $cbd_injury_resuscitation_iv to 1)]
+]&lt;br&gt;
+(if: $cbd_injury_resuscitation_foley is 0)[
+Insert a Foley catheter? (click: &quot; Foley catheter&quot;)[ 50cc of dark urine comes out.(set: $cbd_injury_resuscitation to $cbd_injury_resuscitation + 2)(set: $cbd_injury_resuscitation_foley to 1)]
+]&lt;br&gt;
+(if: $cbd_injury_resuscitation_aline is 0)[
+Start an Arterial line? (click: &quot; Arterial line&quot;)[ You have second thoughts and hold off for now. (set: $cbd_injury_resuscitation to $cbd_injury_resuscitation + 4)(set: $cbd_injury_resuscitation_aline to 1)]
+]&lt;br&gt;
+(if: $cbd_injury_resuscitation_cvc is 0)[
+Start a Central line (click: &quot; Central line&quot;)[ You have second thoughts and hold off for now. (set: $cbd_injury_resuscitation to $cbd_injury_resuscitation + 8)(set: $cbd_injury_resuscitation_cvc to 1)]
+]&lt;br&gt;
+]
+&lt;br&gt;
+[[Get diagnostic tests |CBD Injury Diagnostic Tests]]&lt;br&gt;
+[[Perform an intervention |CBD Injury Treatment]]&lt;br&gt;
+]}</tw-passagedata>
+<tw-passagedata pid="28" name="CBD Injury Diagnostic Tests" tags="" position="1291,1286">You wonder what tests you should order.
+
+{(if: $cbd_injury_labs is 0)[
+&#39;&#39;Laboratory tests&#39;&#39;? (click: &quot;Laboratory tests&quot;)[{&lt;br&gt;CBC: 15&gt;14/42&lt;200&lt;br&gt;BMP: 140/3.5/110/22/20/0.9/120&lt;br&gt;LFT: 8/4/68/76/240/0.4&lt;br&gt;Beta HCG: (-)
+(set: $cbd_injury_labs to 1)}]
+]
+&lt;br&gt;
+(if: $cbd_injury_ruq_us is 0)[
+&#39;&#39;RUQ Ultrasound&#39;&#39;? (click: &quot;RUQ Ultrasound&quot;)[{&lt;br&gt;(+) Periccholecystic fluid&lt;br&gt;Gallbladder wall is 6 mm thick&lt;br&gt;(+) Cholelithaisis&lt;br&gt;CBD is 6 mm
+(set: $cbd_injury_ruq_us to 1)}]
+]
+&lt;br&gt;
+(if: $cbd_injury_ct_ap is 0)[
+&#39;&#39;CT Abdomen/Pelvis&#39;&#39;? (click: &quot;CT Abdomen/Pelvis&quot;)[{&lt;br&gt;(+) Pericholecystic fluid&lt;br&gt;Dilated Gallbladder&lt;br&gt;No other acute intraabdominal abnormalities noted
+(set: $cbd_injury_ct_ap to 1)
+(set: $cbd_injury_delay to 1)}]
+]
+&lt;br&gt;
+(if: $cbd_injury_hida is 0)[
+&#39;&#39;HIDA Scan&#39;&#39;? (click: &quot;HIDA Scan&quot;)[{ The nuclear tracer isn&#39;t in house. You sure you need this?
+(set: $cbd_injury_hida to 1)
+(set: $cbd_injury_delay to 1)}]
+]
+&lt;br&gt;
+(if: $cbd_injury_mrcp is 0)[
+&#39;&#39;MRCP&#39;&#39;? (click: &quot;MRCP&quot;)[{ The MRI machine is broken. You sure you need this?
+(set: $cbd_injury_mrcp to 1)
+(set: $cbd_injury_delay to 1)}]
+]
+&lt;br&gt;
+(if: $cbd_injury_ercp is 0)[
+&#39;&#39;ERCP&#39;&#39;? (click: &quot;ERCP&quot;)[{ The Gastroenterologist is definitely not on the same page as you. You sure you need this?
+(set: $cbd_injury_ercp to 1)
+(set: $cbd_injury_delay to 1)}]
+]
+}
+
+[[Perform an intervention |CBD Injury Treatment]]
+{
+(set: $cbd_injury_resuscitation_threshold to 3)
+(if: $cbd_injury_resuscitation &lt; $cbd_injury_resuscitation_threshold)[]
+(if: $cbd_injury_resuscitation is $cbd_injury_resuscitation_threshold)[]
+(if: $cbd_injury_resuscitation &gt; $cbd_injury_resuscitation_threshold)[]
+(set: $cbd_injury_diagnosis to 1)
+}</tw-passagedata>
+<tw-passagedata pid="29" name="CBD Injury Treatment" tags="" position="1489,1448">{(if: $cbd_injury_diagnosis is 0)[
+Who do you think you are? Sherlock Holmes? Are you sure you don&#39;t want to perform some [[tests|CBD Injury Diagnostic Tests]] before you go any further?
+](else:)[
+You&#39;re about to call your chief resident. What&#39;s the plan?&lt;br&gt;
+&lt;br&gt;
+[[Conservative management |CBD Injury Conservative Management]] for now.&lt;br&gt;
+Schedule the patient for an [[ERCP |CBD Injury ERCP]].&lt;br&gt;
+Preop the patient for an [[Exploratory Laparotomy |CBD Injury Exploratory Laparotomy]].
+]}</tw-passagedata>
+<tw-passagedata pid="30" name="CBD Injury Conservative Management" tags="" position="1670,1465">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="31" name="CBD Injury ERCP" tags="" position="1675,1332">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="32" name="CBD Injury Exploratory Laparotomy" tags="" position="1506,1307">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 
 
