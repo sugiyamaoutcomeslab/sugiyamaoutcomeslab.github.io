@@ -73,7 +73,6 @@
 	   width: 48px;
 		height: 48px;
 		text-align: left;
-		background-color: #457B9D;
 		position: relative;
 
       border: none;
@@ -85,19 +84,8 @@
 
       position: relative;
       top: 36px;
-      right: 30px;
+      right: 0px;
    }
-
-	#nav-wrap > a:before,
-   #nav-wrap > a:after {
-	   position: absolute;
-		border: 3px solid #fff;
-		top: 30%;
-		left: 20%;
-		right: 20%;
-		content: '';
-	}
-   #nav-wrap > a:after { top: 60%; }
 
    /* toggle buttons */
 	#nav-wrap:not( :target ) > a:first-of-type,
@@ -114,16 +102,16 @@
       width: auto;
 
       position: relative;
-      top: 48px;
+      top: 36px;
       right: 0px;
    }
 
    /* display menu panels */
 	#nav-wrap:target > ul#nav	{
 	   display: block;
-      padding: 30px 20px 48px 20px;
-      background: #457B9D;
-      margin: 0 20px;
+      padding: 10px 20px 10px 10px;
+      background: #FFBF00;
+      margin-top: 0px;
       clear: both;
       border-radius: 3px;
    }
@@ -320,7 +308,7 @@
    /* primary navigation */
    #nav-wrap { width: 100%; }
    #nav-wrap ul#nav {
-      top: 72px;
+      top: 36px;
       right: 0px;
    }
 

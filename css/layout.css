@@ -229,6 +229,17 @@ header .logo a {
    border-radius: 3px;
 }
 
+#nav-wrap > a.mobile-btn img.mobile-btn-bars {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 6px;
+   padding: 4px;
+   border: 1px solid white;
+   background: #FFBF00;
+   height: 36px;
+}
+
 ul#nav {
    min-height: 48px;
    width: auto;
