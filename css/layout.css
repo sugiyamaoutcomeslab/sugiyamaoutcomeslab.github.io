@@ -658,4 +658,6 @@ footer .copyright  li:first-child:before {
    text-shadow: none;
    color: transparent;
 }
+
+#go-top a:visited { background-color: #1D3557; }
 #go-top a:hover { background-color: #E63946; }

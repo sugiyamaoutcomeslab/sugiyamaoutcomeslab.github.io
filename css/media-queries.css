@@ -9,6 +9,7 @@
 /* ================================================================== */
 @media screen and (min-width: 900px) {
    header .logo { left: 36px; }
+   #nav-wrap a.mobile-btn { right: 36px; }
 }
 
 /* small screens
@@ -16,6 +17,7 @@
 @media only screen and (max-width: 900px) {
 
    header .logo  { left: 48px; }
+   #nav-wrap a.mobile-btn { right: 48px; }
 
    /* page title
    -------------------------------------------------------------------- */
@@ -87,12 +89,14 @@
       right: 0px;
    }
 
+   #nav-wrap a.mobile-btn { right: 24px; }
+   
    /* toggle buttons */
 	#nav-wrap:not( :target ) > a:first-of-type,
 	#nav-wrap:target > a:last-of-type  {
 	   display: block;
 	}
-
+   
    /* hide menu panel */
    #nav-wrap ul#nav {
       height: auto;
@@ -103,7 +107,7 @@
 
       position: relative;
       top: 36px;
-      right: 0px;
+      right: 28px;
    }
 
    /* display menu panels */
